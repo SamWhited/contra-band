@@ -1,0 +1,50 @@
+{
+  "allemande": {
+    "name": "Allemande"
+  },
+  "balance": {
+    "name": "Balance"
+  },
+  "butterflyWhirl": {
+    "name": "Butterfly Whirl"
+  },
+  "courtesyTurn": {
+    "name": "Courtesy Turn"
+  },
+  "dosido": {
+    "name": "Do-si-do"
+  },
+  "gypsy": {
+    "name": "Gypsy"
+  },
+  "promenade": {
+    "name": "Promenade"
+  },
+  "rollAway": {
+    "name": "Roll Away"
+  },
+  "sashay": {
+    "name": "Sashay"
+  },
+  "swing": {
+    "name": "Swing"
+  },
+  "turnAlone": {
+    "name": "Turn Alone"
+  },
+  "turnCouple": {
+    "name": "Turn as a Couple"
+  },
+  "californiaTwirl": {
+    "name": "California Twirl"
+  },
+  "starThrough": {
+    "name": "Star Through"
+  },
+  "boxGnat": {
+    "name": "Box the Gnat"
+  },
+  "swatFlea": {
+    "name": "Swat the Flea"
+  }
+}

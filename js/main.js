@@ -18,4 +18,14 @@ $(function() {
     }
   });
 
+  // Load the moves
+  $.getJSON('moves.json', function(data, textStatus, jqXHR) {
+    $.each(data, function(val, move) {
+      $('#moves select').append($('<option/>').val(val).text(move.name));
+    });
+    $('#moves-loading').fadeOut(function() {
+      $('#moves').fadeIn();
+    });
+  });
+
 });

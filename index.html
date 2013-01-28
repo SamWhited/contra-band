@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="css/main.css" />
     </head>
     <body>
-        <div id="oldBrowserModal" class="modal hide fade" aria-labelledby="oldBrowserModalLabel" aria-hidden="true">
+        <div id="oldBrowserModal" class="modal hide fade" role="dialog" aria-labelledby="oldBrowserModalLabel" aria-hidden="true" tabindex="-1">
           <div class="modal-header"><h3 id="oldBrowserModalLabel">Upgrade your Browser</h3></div>
           <div class="modal-body">
             <p id="chromeframe">This app requires a <a href="http://browsehappy.com">modern browser</a>.</p>
@@ -30,9 +30,10 @@
             <a class="brand" href="/">Contra Band</a>
             <p class="navbar-text pull-right"><a href="https://samwhited.com" class="navbar-link brand">SW</a></p>
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="#">New</a></li>
+              <li><a href="#">Load</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Export</a></li>
             </ul>
             </div>
           </div>
@@ -43,28 +44,12 @@
             <div class="span3">
               <div class="well top sidebar-nav" id="actions" >
                 <ul class="nav nav-list">
-                  <li class="nav-header">Actions</li>
-                  <li><a href="#">New</a></li>
-                  <li><a href="#">Load</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">Export</a></li>
                   <li class="nav-header">Moves</li>
-                  <li id="moves">
-                    <select size="10">
-                      <option>Allemande</option>
-                      <option>Balance</option>
-                      <option>Butterfly Whirl</option>
-                      <option>Courtesey Turn</option>
-                      <option>Do-Si-Do</option>
-                      <option>Gypsy</option>
-                      <option>Promenade</option>
-                      <option>Roll Away</option>
-                      <option>Roll Away with a Half Sashay</option>
-                      <option>Shashay</option>
-                      <option>Swing</option>
-                      <option>Turn Alone</option>
-                      <option>Turn as a Couple</option>
-                    </select>
+                  <li id="moves-loading">
+                    <i class="icon-spinner icon-spin"></i> 
+                  </li>
+                  <li id="moves" class="hide">
+                    <select size="10"></select>
                     <br/>
                     <button id="addButton" class="btn btn-mini btn-primary" disabled="disabled">Add</button>
                   </li>
