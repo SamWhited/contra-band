@@ -14,9 +14,15 @@
         <link rel="stylesheet" href="css/main.css" />
     </head>
     <body>
-        <!--[if lt IE 9]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>.</p>
-        <![endif]-->
+        <div id="oldBrowserModal" class="modal show fade">
+          <div class="modal-header"><h3>Upgrade your Browser</h3></div>
+          <div class="modal-body">
+            <p id="chromeframe">This app requires a <a href="http://browsehappy.com">modern browser</a>.</p>
+          </div>
+          <div class="modal-footer">
+            <a href="http://browsehappy.com" class="btn btn-primary">Upgrade</a>
+          </div>
+        </div>
 
         <div class="navbar navbar-fixed-top">
           <div class="navbar-inner">
@@ -123,6 +129,13 @@
         <script src="js/underscore.js"></script>
         <script src="js/backbone.js"></script>
         <script src="js/main.js"></script>
+        <!--[if lt IE 9]>
+          <script type="text/javascript">
+            $('#oldBrowserModal').modal({
+              keyboard: false
+            });
+          </script>
+        <![endif]-->
 
     </body>
 </html>
