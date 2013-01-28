@@ -54,11 +54,11 @@ body {
 }
 
 #move-list li.A:before {
-  content: "Ⓐ "
+  content: "A "
 }
 
 #move-list li.B:before {
-  content: "Ⓑ "
+  content: "B "
 }
 
 #move-list li:last-child {
