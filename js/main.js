@@ -7,7 +7,12 @@ $(function() {
     }
   });
 
-  // When a move is selected
+  // Activate tooltips
+  $("[rel='tooltip']").tooltip({
+    placement: 'bottom'
+  });
+
+  // On move select
   var movesSelect = $('#moves select'),
       moveAddButton = $('#moves #addButton');
   movesSelect.change(function() {
