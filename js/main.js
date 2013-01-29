@@ -28,4 +28,12 @@ $(function() {
     });
   });
 
+  // On move removal click
+  $('#move-list li i.icon-remove-sign').click(function(e) {
+    var target = $(e.target).parent('li');
+    target.fadeOut(function() {
+      target.remove();
+    });
+  });
+
 });
