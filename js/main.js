@@ -3,8 +3,39 @@ $(function() {
   //
   // Helper Functions
   //
-
-  var insertMoveLi = function(options) {
+  var newEditableSpan = function(options) {
+    options = $.extend({
+      text: 'New Editable',
+    }, options);
+    return (
+      addEditableHandlers($('<span/>')
+        .text(options.text)
+        .attr('contenteditable', 'true')
+        .attr('data-original-text', options.text))
+    );
+  },
+  addEditableHandlers = function(editable) {
+    editable = editable || $('[contenteditable=true]');
+    editable.each(function(i, v) {
+      var target = $(v);
+      target.attr('data-original-text', target.text());
+    });
+    editable.keydown(function(e) {
+      var target = $(e.target);
+      switch (e.which) {
+        case 13: // Enter
+          target.attr('data-original-text', target.text());
+          target.blur();
+          break;
+        case 27: // Escape
+          target.text(target.attr('data-original-text'));
+          target.blur();
+          break;
+      }
+    });
+    return editable;
+  },
+  insertMoveLi = function(options) {
     options = $.extend({
       title: 'New Move',
     }, options);
@@ -12,7 +43,9 @@ $(function() {
     var newMove = $('<li/>')
       .hide()
       .append([
-        $('<span/>').text(options.title).attr('contenteditable', 'true'),
+        newEditableSpan({
+          text: options.title
+        }),
         $('<i/>').addClass('icon-remove-sign').click(function(e) {
           var target = $(e.target).parent('li');
           target.fadeOut(function() {
@@ -35,6 +68,10 @@ $(function() {
     newMove.fadeIn();
     return (newMove);
   }
+
+  // Make sure any editable elements that are already in the page have the
+  // required handlers.
+  addEditableHandlers();
 
   //
   // AJAX Calls
@@ -71,7 +108,7 @@ $(function() {
   });
 
   // When the '?' key is pressed
-  $(document).keypress(function(e) {
+  $(document).keydown(function(e) {
     var focused = $("*:focus");
     if (!focused.is("textarea, input[text], [contenteditable=true]")
           && e.which == 63) {
