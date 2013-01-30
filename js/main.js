@@ -111,7 +111,7 @@ $(function() {
   $(document).keydown(function(e) {
     var focused = $("*:focus");
     if (!focused.is("textarea, input[text], [contenteditable=true]")
-          && e.which == 63) {
+          && e.which == 191) {
       $('#helpModal').modal('toggle');
     }
   });
