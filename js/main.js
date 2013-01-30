@@ -5,7 +5,7 @@ $(function() {
   // Setup a namespace for the app to use
   //
   var global = (1,eval)('this');
-  global.contraband = global.contraband || {};
+  contraband = global.contraband = global.contraband || {};
 
   //
   // Helper Functions
@@ -86,6 +86,7 @@ $(function() {
 
   // Load the moves
   $.getJSON('moves.json', function(data, textStatus, jqXHR) {
+    contraband.moves = data;
     $.each(data, function(val, move) {
       $('#moves select').append($('<option/>').val(val).text(move.name));
     });
@@ -96,6 +97,9 @@ $(function() {
 
   // Load an example dance
   $.getJSON('brokensixpence.json', function(data, textStatus, jqXHR) {
+    contraband.dance = data.dance;
+    $('#title').text(data.dance.title);
+    $('#author').text(data.dance.author);
     $.each(data.dance.moves, function(val, move) {
       insertMoveLi({
         title: move.title
