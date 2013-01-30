@@ -9,6 +9,31 @@ body {
           font-smoothing: antialiased;
 }
 
+*[contenteditable=true] {
+  outline: 0;
+  padding: 0 1em;
+}
+
+*[contenteditable=true]:hover,
+*[contenteditable=true]:active,
+*[contenteditable=true]:focus {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+      -ms-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+       -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+       -o-border-radius: 10px;
+          border-radius: 10px;
+}
+
+*[contenteditable=true]:active,
+*[contenteditable=true]:focus {
+  border: 1px solid rgba(82, 168, 236, 0.8);
+}
+
 .navbar .pull-right .brand {
   padding: 0;
   margin: 0 0 0 1em;
