@@ -1,4 +1,11 @@
 $(function() {
+  "use strict";
+
+  //
+  // Setup a namespace for the app to use
+  //
+  var global = (1,eval)('this');
+  global.contraband = global.contraband || {};
 
   //
   // Helper Functions
