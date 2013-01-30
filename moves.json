@@ -1,10 +1,9 @@
 {
   "allemande": {
     "name": "Allemande",
-    "options": [{
-      "name": "Direction",
-      "value": ["Left", "Right"]
-    }]
+    "options": {
+      "direction": ["Left", "Right"]
+    }
   },
   "balance": {
     "name": "Balance"
@@ -14,10 +13,9 @@
   },
   "circle": {
     "name": "Circle",
-    "options": [{
-      "name": "Direction",
-      "value": ["Left", "Right"]
-    }]
+    "options": {
+      "direction": ["Left", "Right"]
+    }
   },
   "courtesyTurn": {
     "name": "Courtesy Turn"

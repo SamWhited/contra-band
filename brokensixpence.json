@@ -17,31 +17,27 @@
     }, {
       "title": "Down the hall, turn alone",
       "name": "downhall",
-      "options": [{
-        "name": "After",
-        "value": "Turn Alone"
-      }]
+      "options": {
+        "after": "Turn Alone"
+      }
     }, {
       "title": "Up the hall, bend the line",
       "name": "uphall",
-      "options": [{
-        "name": "After",
-        "value": "Bend the Line"
-      }]
+      "options": {
+        "after": "Bend the Line"
+      }
     }, {
       "title": "Circle left",
       "name": "circle",
-      "options": [{
-        "name": "Direction",
-        "value": "Left"
-      }]
+      "options": {
+        "direction": "Left"
+      }
     }, {
       "title": "Left hand star",
       "name": "star",
-      "options": [{
-        "name": "Direction",
-        "value": "Counter Clockwise"
-      }]
+      "options": {
+        "direction": "Counter Clockwise"
+      }
     }]
   }
 }

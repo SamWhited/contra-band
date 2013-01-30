@@ -45,9 +45,14 @@ $(function() {
   insertMoveLi = function(options) {
     options = $.extend({
       title: 'New Move',
+      options: []
     }, options);
 
-    var newMove = $('<li/>')
+    var newMoveOptions = $('<div/>')
+      .addClass('well')
+      .addClass('form-horizontal')
+      .hide(),
+    newMove = $('<li/>')
       .hide()
       .append([
         newEditableSpan({
@@ -63,8 +68,38 @@ $(function() {
           insertMoveLi({
             after: $(e.target).parent('li')
           });
-        })
+        }),
+        newMoveOptions
       ]);
+    if (_.has(contraband.moves, options.name)
+          && options.options
+          && _.keys(options.options).length > 0) {
+      var allOptions = contraband.moves[options.name].options;
+      $.each(allOptions, function(optionName, optionValues) {
+        if (_.has(options.options, optionName)) {
+          var formElement;
+          switch (toString.call(optionValues)) {
+            case "[object Array]":
+              formElement = $('<select/>').append(
+                _.map(optionValues, function(item) {
+                  var optionEl = $('<option/>').text(item);
+                  if (item == options.options[optionName]) {
+                    optionEl.attr('selected', 'selected');
+                  }
+                  return optionEl;
+                })
+              )
+              break;
+          }
+          newMoveOptions.append(
+            $('<div/>').addClass('control-group').append(
+              $('<label/>').addClass('control-label').text(optionName),
+              $('<div/>').addClass('controls').append(formElement)
+            )
+          )
+        }
+      });
+    }
 
     if (options.after) {
       newMove.insertAfter($(options.after));
@@ -101,9 +136,7 @@ $(function() {
     $('#title').text(data.dance.title);
     $('#author').text(data.dance.author);
     $.each(data.dance.moves, function(val, move) {
-      insertMoveLi({
-        title: move.title
-      });
+      insertMoveLi(move);
     });
   });
 
