@@ -9,6 +9,13 @@ body {
           font-smoothing: antialiased;
 }
 
+#helpModal dl dt:before {
+  content: "« ";
+}
+#helpModal dl dt:after {
+  content: " »";
+}
+
 *[contenteditable=true] {
   outline: 0;
   padding: 0 1em;
