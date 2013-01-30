@@ -1,12 +1,23 @@
 {
   "allemande": {
-    "name": "Allemande"
+    "name": "Allemande",
+    "options": [{
+      "name": "Direction",
+      "value": ["Left", "Right"]
+    }]
   },
   "balance": {
     "name": "Balance"
   },
   "butterflyWhirl": {
     "name": "Butterfly Whirl"
+  },
+  "circle": {
+    "name": "Circle",
+    "options": [{
+      "name": "Direction",
+      "value": ["Left", "Right"]
+    }]
   },
   "courtesyTurn": {
     "name": "Courtesy Turn"

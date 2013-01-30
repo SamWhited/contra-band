@@ -1,22 +1,47 @@
 {
   "dance": {
-    "name": "Broken Sixpence",
+    "title": "Broken Sixpence",
+    "author": "Don Armstrong",
     "moves": [{
-      "title": "Neighbor dosido"
+      "title": "Neighbor dosido",
+      "name": "dosido"
     }, {
-      "title": "Gents dosido"
+      "title": "Gents dosido",
+      "name": "dosido"
     }, {
-      "title": "Ladies dosido"
+      "title": "Ladies dosido",
+      "name": "dosido"
     }, {
-      "title": "Actives swing"
+      "title": "Actives swing",
+      "name": "swing"
     }, {
-      "title": "Down the hall, turn alone"
+      "title": "Down the hall, turn alone",
+      "name": "downhall",
+      "options": [{
+        "name": "After",
+        "value": "Turn Alone"
+      }]
     }, {
-      "title": "Up the hall, bend the line"
+      "title": "Up the hall, bend the line",
+      "name": "uphall",
+      "options": [{
+        "name": "After",
+        "value": "Bend the Line"
+      }]
     }, {
-      "title": "Circle left"
+      "title": "Circle left",
+      "name": "circle",
+      "options": [{
+        "name": "Direction",
+        "value": "Left"
+      }]
     }, {
-      "title": "Left hand star"
+      "title": "Left hand star",
+      "name": "star",
+      "options": [{
+        "name": "Direction",
+        "value": "Counter Clockwise"
+      }]
     }]
   }
 }

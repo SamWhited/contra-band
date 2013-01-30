@@ -122,6 +122,10 @@ body {
   color: #333;
 }
 
+#move-list li .well {
+  margin-top: 1em;
+}
+
 #dance footer {
   opacity: 0;
   margin: 0 -20px -20px -20px;
