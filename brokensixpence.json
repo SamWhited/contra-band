@@ -4,38 +4,46 @@
     "author": "Don Armstrong",
     "moves": [{
       "title": "Neighbor dosido",
-      "name": "dosido"
+      "options": {
+        "move": "dosido"
+      }
     }, {
       "title": "Gents dosido",
-      "name": "dosido"
+      "options": {
+        "move": "dosido"
+      }
     }, {
       "title": "Ladies dosido",
-      "name": "dosido"
+      "options": {
+        "move": "dosido"
+      }
     }, {
       "title": "Actives swing",
-      "name": "swing"
+      "options": {
+        "move": "swing"
+      }
     }, {
       "title": "Down the hall, turn alone",
-      "name": "downhall",
       "options": {
+        "move": "downhall",
         "after": "Turn Alone"
       }
     }, {
       "title": "Up the hall, bend the line",
-      "name": "uphall",
       "options": {
+        "move": "uphall",
         "after": "Bend the Line"
       }
     }, {
       "title": "Circle left",
-      "name": "circle",
       "options": {
+        "move": "circle",
         "direction": "Left"
       }
     }, {
       "title": "Left hand star",
-      "name": "star",
       "options": {
+        "move": "star",
         "direction": "Counter Clockwise"
       }
     }]

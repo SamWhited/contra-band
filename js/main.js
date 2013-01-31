@@ -77,10 +77,11 @@ $(function() {
         }),
         newMoveOptions
       ]);
-    if (_.has(contraband.moves, options.name)
-          && options.options
-          && _.keys(options.options).length > 0) {
-      var allOptions = contraband.moves[options.name].options;
+    if (options.options
+          && _.has(contraband.moves, options.options.move)) {
+      var allOptions = $.extend(contraband.moves[options.options.move].options, {
+        "move": contraband.moves
+      });
       $.each(allOptions, function(optionName, optionValues) {
         if (_.has(options.options, optionName)) {
           var formElement;
@@ -94,7 +95,18 @@ $(function() {
                   }
                   return optionEl;
                 })
-              )
+              );
+              break;
+            case "[object Object]":
+              formElement = $('<select/>').append(
+                _.map(optionValues, function(item, name) {
+                  var optionEl = $('<option/>').text(item.name);
+                  if (name == options.options[optionName]) {
+                    optionEl.attr('selected', 'selected');
+                  }
+                  return optionEl;
+                })
+              );
               break;
           }
           newMoveOptions.append(
