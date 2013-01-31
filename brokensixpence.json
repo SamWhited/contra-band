@@ -25,13 +25,15 @@
     }, {
       "title": "Down the hall, turn alone",
       "options": {
-        "move": "downhall",
+        "move": "walkhall",
+        "direction": "Down",
         "after": "Turn Alone"
       }
     }, {
       "title": "Up the hall, bend the line",
       "options": {
-        "move": "uphall",
+        "move": "walkhall",
+        "direction": "Up",
         "after": "Bend the Line"
       }
     }, {
@@ -44,7 +46,7 @@
       "title": "Left hand star",
       "options": {
         "move": "star",
-        "direction": "Counter Clockwise"
+        "direction": "Counterclockwise"
       }
     }]
   }

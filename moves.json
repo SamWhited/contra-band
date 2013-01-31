@@ -23,6 +23,13 @@
   "dosido": {
     "name": "Do-si-do"
   },
+  "walkhall": {
+    "name": "Walk the hall",
+    "options": {
+      "direction": ["Up", "Down"],
+      "after": ["Turn Alone", "Bend the Line"]
+    }
+  },
   "gypsy": {
     "name": "Gypsy"
   },
@@ -46,6 +53,12 @@
   },
   "californiaTwirl": {
     "name": "California Twirl"
+  },
+  "star": {
+    "name": "Star",
+    "options": {
+      "direction": ["Clockwise", "Counterclockwise"]
+    }
   },
   "starThrough": {
     "name": "Star Through"
