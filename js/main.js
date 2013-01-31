@@ -53,6 +53,12 @@ $(function() {
       .addClass('form-horizontal')
       .hide(),
     newMove = $('<li/>')
+      .click(function(e) {
+        var target = $(e.target);
+        if (target.is('li')) {
+          target.find('.form-horizontal').first().toggle('slow');
+        }
+      })
       .hide()
       .append([
         newEditableSpan({
